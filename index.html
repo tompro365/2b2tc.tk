@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2b2tc.tk</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="menu">
+        <div class="introduce">
+            <button type="button" onclick="introduce()">
+                <i class="introduce-text">Về server minecraft của chúng tôi</i>
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div label>
+            Join server
+        </div>
+        <div class="copy-text">
+            <input type="text" class="text" value="2b2tc.tk">
+            <button>
+                <i class="fa fa-clone">Copy IP</i>
+            </button>
+        </div>
+        <br>
+        <div class="version">
+            <h3>version: 1.12.2</h3>
+        </div>
+    </div>
+    <script>
+    let copyText = document.querySelector(".copy-text");
+    copyText.querySelector("button").addEventListener("click", function(){
+    let input = document.querySelector("input.text");
+    input.select();
+    document.execCommand("copy");
+    copyText.classList.add("active");
+    window.getSelection().removeAllRanges();
+    setTimeout(function(){
+        copyText.classList.remove("active");
+    },2500)
+});
+    </script>
+</body>
+</html>
